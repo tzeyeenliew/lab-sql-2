@@ -61,8 +61,9 @@ LIMIT 10;
 SELECT LOWER(email)
 FROM customer;
 
-SELECT 	LOWER(first_name), UPPER(last_name)
-FROM customer;
+Select CONCAT(UPPER(SUBSTRING(first_name,1,1)),LOWER(SUBSTRING(first_name,2))) AS firstname, 
+CONCAT(UPPER(SUBSTRING(last_name,1,1)),LOWER(SUBSTRING(last_name,2)))  
+AS lastname FROM customer;
  
  
 ### 11. What's the length of the longest film title?
